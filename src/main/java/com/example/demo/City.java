@@ -11,7 +11,7 @@ class City {
     private String name;
 
     public String getName() {
-        return name + " 世界都市の情報";
+        return name + " 世界都市情報";
     }
 
     public void setName(String name) {
