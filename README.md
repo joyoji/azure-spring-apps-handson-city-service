@@ -52,6 +52,8 @@ echo "Creating $database"
 az cosmosdb sql database create --account-name $account --resource-group $AZ_RESOURCE_GROUP --name $database
 
 # Create a SQL API container
+# Gitbash setting to avoid wrong path in env
+export MSYS_NO_PATHCONV=1 
 echo "Creating $container with $maxThroughput"
 az cosmosdb sql container create --account-name $account --resource-group $AZ_RESOURCE_GROUP --database-name $database --name $container --partition-key-path $partitionKey --throughput 4000 
 
