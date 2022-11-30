@@ -1,3 +1,4 @@
+```bash
 # azure-spring-apps-handson-city-service
 Azure spring apps hands on project
 
@@ -94,3 +95,5 @@ az spring app deploy -n AZ_SPRING_APPS_SERVICE_NAME --artifact-path target/demo-
 # URLに cities は city-service のpathとなる
 # 期待値 Http status = 200, レスポンス : [[{"name":"Paris, France"},{"name":"London, UK"}]]
 curl <コピーしたエンドポイント>/cities![image](https://user-images.githubusercontent.com/87787209/189562098-bf4bb61b-a291-4979-ab28-263628e1f446.png)
+
+```
