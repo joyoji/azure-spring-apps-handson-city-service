@@ -70,7 +70,7 @@ az cosmosdb sql container create --account-name $account --resource-group $AZ_RE
 }
 
 
-# Spring Apps サービスのバインドを設定
+# Spring Apps サービスのバインドを設定 不具合！！！
 AZ_RESOURCE_ID=`az resource list --query "[? contains(name, 'account-cosmosdb001')].id" -o tsv`
 
 az spring app binding cosmos add --api-type sql \
@@ -91,7 +91,7 @@ cd azure-spring-apps-handson-city-service
 mvn clean package -DskipTests
 
 # jarファイルをcity-serviceアプリへデプロィ
-az spring app deploy -n AZ_SPRING_APPS_SERVICE_NAME --artifact-path target/demo-0.0.1-SNAPSHOT.jar
+az spring app deploy -n $AZ_SPRING_APPS_SERVICE_NAME --artifact-path target/demo-0.0.1-SNAPSHOT.jar
 
 # 任意コンソールを開く、動作確認を実施
 # URLに cities は city-service のpathとなる
